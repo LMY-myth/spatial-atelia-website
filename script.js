@@ -1013,6 +1013,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   })();
 
+  /* ---------- Footer Social Share ---------- */
+  (function initSocialShare() {
+    var links = document.querySelectorAll('[data-share]');
+    if (!links.length) return;
+
+    var toast = document.createElement('div');
+    toast.className = 'share-toast';
+    toast.textContent = 'Link copied! Paste it on Instagram.';
+    document.body.appendChild(toast);
+
+    links.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var url = encodeURIComponent(window.location.href);
+        var platform = link.getAttribute('data-share');
+
+        if (platform === 'facebook') {
+          window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank', 'width=600,height=400');
+        } else if (platform === 'twitter') {
+          window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + encodeURIComponent('Check out Spatial Atélia — elite design & visualization'), '_blank', 'width=600,height=400');
+        } else if (platform === 'instagram') {
+          navigator.clipboard.writeText(window.location.href).then(function () {
+            toast.classList.add('is-visible');
+            setTimeout(function () { toast.classList.remove('is-visible'); }, 2500);
+          });
+        }
+      });
+    });
+  })();
+
   /* ---------- Back to Top Button ---------- */
   (function initBackToTop() {
     var btn = document.createElement('button');
