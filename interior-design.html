@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design - Studio Luma</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0">
+        <defs>
+          <clipPath id="clip-services-hero" clipPathUnits="objectBoundingBox">
+            <path d="M0,0 H1 V0.85 Q0.7,1 0,0.9 Z" />
+          </clipPath>
+        </defs>
+      </svg>
+      <!-- 导航栏 -->
+      <nav class="navbar">
+          <div class="nav-container">
+              <a class="nav-logo" href="index.html"><span class="nav-logo-light">Spatial</span><span class="nav-logo-bold">Atélia</span></a>
+              <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+              </button>
+              <ul class="nav-menu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="architecture.html#top">Commercial <br>& Architecture</a></li>
+                  <li><a href="interior-design.html">Interior Design</a></li>
+                  <li><a href="furniture-rendering.html">Product Rendering</a></li>
+                  <li><a href="pricing.html">Pricing</a></li>
+                  <li><a href="index.html#project-details">About</a></li>
+              </ul>
+          </div>
+      </nav>
+  
+
+    <!-- 首页 Split Hero -->
+    <section class="split-hero split-hero--interior">
+        <div class="split-hero-media" role="img" aria-label="Warm red bedroom interior">
+            <img src="image/3-interior-1.png" alt="Interior bedroom in warm red tones">
+        </div>
+        <div class="split-hero-panel">
+            <div class="split-hero-content">
+                <h1 class="split-hero-title">INTERIOR DESIGN</h1>
+                <p class="split-hero-desc">Experience-driven interiors that balance aesthetics and function.</p>
+                <a class="split-hero-link" href="pricing.html">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- 视频播放器 
+    <div class="video-player-container">
+        <div class="video-wrapper">
+            <div class="video-cover" id="video-cover"></div>
+            <video id="interior-video" preload="metadata">
+                <source src="../image/video1.mp4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="play-button-overlay" id="play-button">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="video-info">
+            <h2 class="video-title">Interior Design</h2>
+            <p class="video-subtitle">Spatial Atélia</p>
+        </div>
+    </div>-->
+    <!--<div class="service-detail-container">
+        <div class="service-detail-hero">
+            <div class="hero-content">
+                <h1 class="service-title">Interior Design</h1>
+                <p class="service-subtitle">your dream space</p>
+                 <div class="service-description">
+                    <p>我们专注于室内空间设计，将美学与功能性完美结合。从色彩搭配到家具选择，从照明设计到材质运用，我们注重每一个细节，为您打造完美的居住环境。</p>
+                </div> 
+            </div>
+        </div>
+    </div>-->
+
+
+    
+    <!-- 光照页面 -->
+    <section class="lighting-section">
+        <div class="container">
+            <div class="lighting-content">
+                <div class="lighting-text">
+                    <span class="lighting-subtitle">Explore S.A.</span>
+                    <h2 class="lighting-title">Turn Vision into Reality</h2>
+                    <p class="lighting-description">
+                        Blend European aesthetics with practical, <strong>human-centered</strong> design to create spaces that are visually stunning, highly functional, and tailored to the way you live. <strong></strong>
+                    </p>
+                </div>
+                <!-- 
+                <div class="lighting-visuals">
+                    <div class="visual-block image-block" data-text="Lighting creates atmosphere and depth in interior spaces">
+                        <img src="../inter-com1.jpg" alt="Commercial interior with natural lighting">
+                    </div>
+                    <div class="visual-block image-block" data-text="Realistic rendering with natural and artificial lighting">
+                        <img src="../image/p4.jpg" alt="Modern bedroom interior with natural lighting">
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+    <!-- 图片展示页面 -->
+    <section class="image-showcase-section">
+        <div class="image-showcase-grid">
+            <div class="showcase-item" data-text="Modern Interior Design - Creating spaces that inspire and comfort">
+                <img src="image/3-interior-2.png" alt="Modern interior design showcase">
+                <div class="showcase-overlay">
+                    <div class="showcase-content">
+                        <h3>Residential Sapces</h3>
+                        <p>Professional 3D Modeling & Rendering | Tailored Visuals for Residential Projects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-item" data-text="Luxury Living Spaces - Where elegance meets functionality">
+                <img src="image/inter17.png" alt="Luxury living space showcase">
+                <div class="showcase-overlay">
+                    <div class="showcase-content">
+                        <h3>Apartment & House</h3>
+                        <p>Enhance both aesthetics and functionality, ensuring every design detail aligns with business goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <!-- 场景类别切换（参考图：大图+下方按钮，随鼠标滑动切换） -->
+    <section class="category-switcher-section">
+        <div class="cat-switcher-container">
+            <div class="feature-gallery-label">DESIGN BY S.A.</div>
+            <h2 class="cat-title">Modern Interior Styling</h2>
+            <p class="cat-subtitle">Your satisfaction is always our top priority—let’s make your dream space a reality.</p>
+            <div class="cat-hero">
+                <div class="cat-track" id="cat-track">
+                    <img class="cat-slide" src="image/1-index-8-1.png" alt="Living Room">
+                    <img class="cat-slide" src="image/1-index-8-4.jpg" alt="Bathroom">
+                    <img class="cat-slide" src="image/1-index-8-2.jpg" alt="Bedroom">
+                    <img class="cat-slide" src="image/1-index-8-3.png" alt="Kitchen">
+                    <img class="cat-slide" src="image/1-index-8-5.png" alt="Home Office">
+                    <img class="cat-slide" src="image/1-index-8-7.jpg" alt="Entryway">
+                    <img class="cat-slide" src="image/3-interior-4-4.png" alt="Dining">
+                    <img class="cat-slide" src="image/1-index-8-8.png" alt="Outdoor">
+                </div>
+            </div>
+            <div class="cat-controls">
+                <button class="cat-nav cat-prev" aria-label="Prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="cat-buttons" id="cat-buttons">
+                    <div class="cat-buttons-track" id="cat-buttons-track">
+                        <button class="cat-btn" data-index="0"><i class="fa-solid fa-couch"></i><span>Living Room</span></button>
+                        <button class="cat-btn active" data-index="2"><i class="fa-solid fa-bath"></i><span>Bathroom</span></button>
+                        <button class="cat-btn" data-index="3"><i class="fa-solid fa-bed"></i><span>Bedroom</span></button>
+                        <button class="cat-btn" data-index="1"><i class="fa-solid fa-utensils"></i><span>Kitchen & Dining</span></button>
+                        <button class="cat-btn" data-index="4"><i class="fa-solid fa-laptop"></i><span>Home Office</span></button>
+                        <button class="cat-btn" data-index="6"><i class="fa-solid fa-mug-hot"></i><span>Dining</span></button>
+                        <button class="cat-btn" data-index="5"><i class="fa-solid fa-building"></i><span>Apartment</span></button>
+                        <button class="cat-btn" data-index="7"><i class="fa-solid fa-chair"></i><span>Furniture</span></button>
+                    </div>
+                </div>
+                <button class="cat-nav cat-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us 部分 -->
+    <section class="usp-video-accordion-section" aria-label="Why Choose Spatial Atélia">
+        <div class="usp-video-accordion-container">
+            <div class="usp-video-accordion-left">
+                <h2 class="usp-video-accordion-title">Why Choose Spatial Atélia?</h2>
+                <p class="usp-video-accordion-subtitle">Your one-stop destination to transform your space.</p>
+
+                <div class="usp-accordion" id="usp-accordion">
+                    <div class="usp-accordion-item" data-video="image/3-interior-video-1.mp4">
+                        <button class="usp-accordion-header" type="button" aria-expanded="false">
+                            <span class="usp-accordion-label">FAST DELIVERY</span>
+                            <span class="usp-accordion-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="usp-accordion-panel">
+                            <p class="usp-accordion-text">3+7 Days of a single room</p>
+                            <p class="usp-accordion-text">5+7 Days for designing multiple rooms</p>
+                            <p class="usp-accordion-text">10+10 Days of a larger-scale project</p>
+                        </div>
+                    </div>
+
+                    <div class="usp-accordion-item" data-video="image/3-interior-video-2.mp4">
+                        <button class="usp-accordion-header" type="button" aria-expanded="false">
+                            <span class="usp-accordion-label">UNLIMITED REVISIONS</span>
+                            <span class="usp-accordion-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="usp-accordion-panel">
+                            <p class="usp-accordion-text">I offer unlimited revisions until you're completely satisfied with the final result.</p>
+                        </div>
+                    </div>
+
+                    <div class="usp-accordion-item" data-video="image/3-interior-video-3.mp4">
+                        <button class="usp-accordion-header" type="button" aria-expanded="false">
+                            <span class="usp-accordion-label">UNLIMITED RENDERS</span>
+                            <span class="usp-accordion-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="usp-accordion-panel">
+                            <p class="usp-accordion-text">You will get cinematic-quality CGI renders with natural lighting and material details.</p>
+                        </div>
+                    </div>
+
+                    <div class="usp-accordion-item" data-video="image/3-interior-video-4.mp4">
+                        <button class="usp-accordion-header" type="button" aria-expanded="false">
+                            <span class="usp-accordion-label">HIGH QUALITY GUARANTEE</span>
+                            <span class="usp-accordion-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="usp-accordion-panel">
+                            <p class="usp-accordion-text">High-quality service for all your design needs, always available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usp-video-accordion-right">
+                <div class="usp-video-frame">
+                    <video class="usp-video" id="usp-accordion-video" autoplay muted loop playsinline preload="metadata">
+                        <source id="usp-accordion-video-source" src="image/3-interior-video-1.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 内部家具展示区域 -->
+    <section class="interior-furniture-showcase" aria-label="Interior furniture">
+        <div class="interior-furniture-container">
+            <div class="interior-furniture-head">
+                <h2 class="interior-furniture-title">Luxury Bathroom Spaces</h2>
+                <p class="interior-furniture-subtitle">Discover a wide collection of stylish furniture items, including sofas, seats, tables, and much more.</p>
+            </div>
+
+            <div class="interior-furniture-stage">
+                <button class="interior-furniture-arrow" id="interior-furniture-next" type="button" aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div class="interior-furniture-grid" id="interior-furniture-grid">
+                    <div class="interior-furniture-card">
+                        <img id="interior-furniture-img-1" src="image/3-interior-6-1.jpg" alt="Interior furniture 1">
+                    </div>
+                    <div class="interior-furniture-card">
+                        <img id="interior-furniture-img-2" src="image/3-interior-6-2.jpg" alt="Interior furniture 2">
+                    </div>
+                    <div class="interior-furniture-card">
+                        <img id="interior-furniture-img-3" src="image/3-interior-6-3.jpg" alt="Interior furniture 3">
+                    </div>
+                    <div class="interior-furniture-card">
+                        <img id="interior-furniture-img-4" src="image/3-interior-6-4.jpg" alt="Interior furniture 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="fr-realtime-section">
+        <div class="fr-realtime-container">
+            <div class="fr-realtime-left">
+                <div class="fr-realtime-kicker">Elevate Your Vision</div>
+                <h2 class="fr-realtime-title">Photorealistic modeling & rendering</h2>
+                <p class="fr-realtime-desc">
+                    Every marble texture, fabric weave, and ambient light detail is rendered with precision, so you can present your luxury interiors with absolute confidence to clients. From concept to final presentation, streamline your workflow and elevate your creative output—without sacrificing time or quality.
+                </p>
+            </div>
+            <div class="fr-realtime-right" aria-label="Real-time rendering showcase">
+                <img class="fr-realtime-image" src="image/4-furni-5-1.jpg" alt="real-time render view 1">
+                <img class="fr-realtime-image" src="image/4-furni-5-2.jpg" alt="real-time render view 2">
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作流程图部分 -->
+    <section class="workflow-section">
+        <div class="workflow-container">
+            <!-- 左侧标题区域 -->
+            <div class="workflow-left">
+                <h1 class="workflow-title">Workflow</h1>
+                <div class="workflow-image">
+                    <img src="image/workflow.png" alt="Workflow Process">
+                </div>
+            </div>
+            
+            <!-- 右侧工作步骤区域 -->
+            <div class="workflow-right">
+                <div class="workflow-steps">
+                    <!-- 步骤1：建模阶段 -->
+                    <div class="workflow-step step-1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Modeling Stage</h3>
+                            <p class="step-description">
+                                <strong>This is the initial stage</strong> where you suggest changes and we will plan the space according to your needs and intended style. This includes the functional layout and style choices, and we will proceed to the next step after we have received your approval of the model.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 步骤2：低分辨率渲染阶段 -->
+                    <div class="workflow-step step-2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Low Resolution Rendering Stage</h3>
+                            <p class="step-description">
+                                <strong>This is a key stage</strong> for you to suggest changes and we will continue to modify the project based on your comments until we have your approval. We will show you alower resolution rendering of the finished project, where you can make specific adjustments to all the design elements such as layout, shape, materials election, and color scheme.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 步骤3：高分辨率渲染阶段 -->
+                    <div class="workflow-step step-3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">High Resolution Rendering Stage</h3>
+                            <p class="step-description">
+                                <strong>This is the final stage</strong> of our work, after all the details have been confirmed, we will carryout the real rendering, which usually takes a few hours(90 minutes or so for a single sheet). Of course, if you find that you have missed a design detail, don’t worry, you are always welcome, you can always ask and we will correct it (this may result in a longer working time)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+          <!-- Discover 部分 -->
+          <section class="discover-section interior-discover-section">
+            <div class="discover-container">
+                <div class="discover-content">
+                    <div class="discover-text">
+                        <h1 class="main-title">Interior Design
+                            Excellence</h1>
+                        <h2 class="sub-title">Your space transformation partner</h2>
+                        <p class="description">We specialize in creating interior spaces that perfectly balance aesthetics and functionality. From residential homes to commercial spaces, we transform your vision into reality with meticulous attention to detail and innovative design solutions. y with meticulous attention to detail and innovative design solutions y with meticulous attention to detail and innovative design solutionsy with meticulous attention to detail and innovative design solutions </p>
+                    </div>
+                </div>
+                <div class="discover-video">
+                    <div class="video-container">
+                        <video id="discover-video1" autoplay muted loop playsinline style="opacity: 1;">
+                            <source src="image/3 (2).mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                        <video id="discover-video2" autoplay muted loop playsinline style="opacity: 0;">
+                            <source src="image/3 (4).mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                        <video id="discover-video3" autoplay muted loop playsinline style="opacity: 0;">
+                            <source src="image/4 (6).mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!-- 动态图片展示页面 -->
+    <section class="dynamic-gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <h2 class="gallery-title">Our Design Portfolio</h2>
+                <p class="gallery-subtitle">Explore our latest interior design projects</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- 第1行：左图35%，右图65% -->
+                <div class="gallery-row row-1">
+                    <div class="gallery-item left-item" data-width="35">
+                        <img src="image/3-interior-7-1.png" alt="Interior Design Project 1">
+                        <div class="gallery-overlay">
+                            <h3>Home Office Space</h3>
+                            <p>Professional work environment</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item right-item" data-width="65">
+                        <img src="image/3-interior-7-2.png" alt="Interior Design Project 2">
+                        <div class="gallery-overlay">
+                            <h3>Home Office Space</h3>
+                            <p>Professional work environment</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第4行：左图65%，右图35% -->
+                <div class="gallery-row row-2">
+                    <div class="gallery-item left-item" data-width="65">
+                        <img src="image/3-interior-7-3.jpg" alt="Interior Design Project 3">
+                        <div class="gallery-overlay">
+                            <h3>Kitchen & Dining Design</h3>
+                            <p>Contemporary interior solutions</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item right-item" data-width="35">
+                        <img src="image/3-interior-7-4.jpg" alt="Interior Design Project 4">
+                        <div class="gallery-overlay">
+                            <h3>Kitchen & Dining Design</h3>
+                            <p>Contemporary interior solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第5行：左图35%，右图65% -->
+                <div class="gallery-row row-1">
+                    <div class="gallery-item left-item" data-width="35">
+                        <img src="image/3-interior-7-5.jpg" alt="Interior Design Project 1">
+                        <div class="gallery-overlay">
+                            <h3>Bathroom Design</h3>
+                            <p>Clean and functional spaces</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item right-item" data-width="65">
+                        <img src="image/3-interior-7-6.jpg" alt="Interior Design Project 2">
+                        <div class="gallery-overlay">
+                            <h3>Bathroom Design</h3>
+                            <p>Clean and functional spaces</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第2行：左图65%，右图35% -->
+                <div class="gallery-row row-2">
+                    <div class="gallery-item left-item" data-width="65">
+                        <img src="image/3-interior-7-7.jpg" alt="Interior Design Project 3">
+                        <div class="gallery-overlay">
+                            <h3>Modern Living</h3>
+                            <p>Contemporary residential design</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item right-item" data-width="35">
+                        <img src="image/3-interior-7-8.jpg" alt="Interior Design Project 4">
+                        <div class="gallery-overlay">
+                            <h3>Modern Living</h3>
+                            <p>Contemporary residential design</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第3行：左图35%，右图65% -->
+                <div class="gallery-row row-3">
+                    <div class="gallery-item left-item" data-width="35">
+                        <img src="image/3-interior-7-9.png" alt="Interior Design Project 5">
+                        <div class="gallery-overlay">
+                            <h3>Minimalist Design</h3>
+                            <p>Hospitality interior solutions</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item right-item" data-width="65">
+                        <img src="image/3-interior-7-10.png" alt="Interior Design Project 6">
+                        <div class="gallery-overlay">
+                            <h3>Minimalist Design</h3>
+                            <p>Hospitality interior solutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第6行：左图65%，右图35% -->
+                <div class="gallery-row row-2">
+                    <div class="gallery-item left-item" data-width="65">
+                        <img src="image/3-interior-7-11.jpg" alt="Interior Design Project 3">
+                        <div class="gallery-overlay">
+                            <h3>Luxury Space</h3>
+                            <p>Contemporary interior solutions</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item right-item" data-width="35">
+                        <img src="image/3-interior-7-12.jpg" alt="Interior Design Project 4">
+                        <div class="gallery-overlay">
+                            <h3>Luxury Space</h3>
+                            <p>Contemporary interior solutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第8行：左图35%，右图65% -->
+                <div class="gallery-row row-3">
+                    <div class="gallery-item left-item" data-width="35">
+                        <img src="image/3-interior-7-13.png" alt="Interior Design Project 5">
+                        <div class="gallery-overlay">
+                            <h3>Cozy Corner</h3>
+                            <p>Warm residential atmosphere</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item right-item" data-width="65">
+                        <img src="image/3-interior-7-14.png" alt="Interior Design Project 6">
+                        <div class="gallery-overlay">
+                            <h3>Cozy Corner</h3>
+                            <p>Warm residential atmosphere</p>
+                        </div>
+                    </div>
+                </div>             
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta-section" aria-label="Project inquiry">
+        <div class="contact-cta-container">
+            <h2 class="contact-cta-title">Ready to Start Your Project?</h2>
+            <p class="contact-cta-subtitle">Let's discuss how we can bring your vision to life with our expert</p>
+            <p class="contact-cta-subtitle">design services.</p>
+            <div class="contact-cta-buttons">
+                <a class="contact-cta-button" href="pricing.html">See Pricing</a>
+                <a class="contact-cta-button contact-cta-button--fiverr" href="https://www.fiverr.com/archi_dwell?source=gig_page&gigs=slug%3Adesign-high-roi-airbnb-interiors-with-amenity-maps-and-360-tours%2Cpckg_id%3A1" target="_blank" rel="noopener noreferrer">
+                    <svg class="fiverr-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16.25 16.25v-10h-4.5v-1.5c0-0.83 0.67-1.5 1.5-1.5h1.5V0h-1.5c-2.49 0-4.5 2.01-4.5 4.5v1.75H6.5v3.5h2.25v6.5h-3.5v3.5h10v-3.5h-3.5v-6.5h4.5v6.5h-1v3.5h4.5v-3.5h-1z"/></svg>
+                    Order on Fiverr
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Spatial Atélia</h3>
+                    <p>Creating unique Interior & Architecture experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="architecture.html">Architecture</a></p>
+                    <p><a href="interior-design.html">Interior Design</a></p>
+                    <p><a href="furniture-rendering.html">Production & Furniture Rendering</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contect Us</h4>
+                    <p>+1 808 9917 199</p>
+                    <p>allenwang.awdesign@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.fiverr.com/archi_dwell?source=gig_page&gigs=slug%3Adesign-high-roi-airbnb-interiors-with-amenity-maps-and-360-tours%2Cpckg_id%3A1" target="_blank" rel="noopener noreferrer" class="footer-fiverr" aria-label="Fiverr"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16.25 16.25v-10h-4.5v-1.5c0-0.83 0.67-1.5 1.5-1.5h1.5V0h-1.5c-2.49 0-4.5 2.01-4.5 4.5v1.75H6.5v3.5h2.25v6.5h-3.5v3.5h10v-3.5h-3.5v-6.5h4.5v6.5h-1v3.5h4.5v-3.5h-1z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Spatial Atélia. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- 动态图片展示动画脚本 -->
+    <script>
+        // 动态图片展示动画
+        function initGalleryAnimation() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            // 创建 Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 添加动画类
+                        entry.target.classList.add('animate');
+                        
+                        // 停止观察已动画的元素
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            // 观察所有图片项
+            galleryItems.forEach(item => {
+                observer.observe(item);
+            });
+        }
+        
+        // 页面加载完成后初始化动画
+        document.addEventListener('DOMContentLoaded', function() {
+            initGalleryAnimation();
+        });
+        
+        // 如果页面已经加载完成，直接初始化
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initGalleryAnimation);
+        } else {
+            initGalleryAnimation();
+        }
+    </script>
+
+    <!-- 图片滑动切换功能脚本 -->
+    <script>
+        // 图片滑动切换功能
+        function initImageSlider() {
+            const sliderSection = document.querySelector('.image-slider-section');
+            if (sliderSection && sliderSection.dataset && sliderSection.dataset.sliderInit === '1') return;
+            const slides = document.querySelectorAll('.slide');
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // 显示指定幻灯片
+            function showSlide(index) {
+                // 移除所有活动状态
+                slides.forEach(slide => slide.classList.remove('active'));
+                categoryBtns.forEach(btn => btn.classList.remove('active'));
+                
+                // 添加活动状态
+                slides[index].classList.add('active');
+                categoryBtns[index].classList.add('active');
+                
+                currentSlide = index;
+                
+                // 更新箭头按钮状态
+                updateArrowButtons();
+            }
+            
+            // 更新箭头按钮状态
+            function updateArrowButtons() {
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === totalSlides - 1;
+            }
+            
+            // 下一张幻灯片
+            function nextSlide() {
+                if (currentSlide < totalSlides - 1) {
+                    showSlide(currentSlide + 1);
+                }
+            }
+            
+            // 上一张幻灯片
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    showSlide(currentSlide - 1);
+                }
+            }
+            
+            // 防抖函数，避免频繁切换
+            let hoverTimeout;
+            
+            // 绑定事件监听器
+            categoryBtns.forEach((btn, index) => {
+                // 鼠标悬停时自动切换（无需点击）
+                btn.addEventListener('mouseenter', () => {
+                    // 清除之前的定时器
+                    clearTimeout(hoverTimeout);
+                    // 立即切换
+                    showSlide(index);
+                });
+                
+                // 保持悬停效果
+                btn.addEventListener('mouseenter', () => {
+                    if (!btn.classList.contains('active')) {
+                        btn.style.borderColor = '#2b6b76';
+                        btn.style.transform = 'translateY(-2px)';
+                    }
+                });
+                
+                btn.addEventListener('mouseleave', () => {
+                    if (!btn.classList.contains('active')) {
+                        btn.style.borderColor = '#e0e0e0';
+                        btn.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            // 箭头按钮事件
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // 键盘导航
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                } else if (e.key === 'ArrowRight') {
+                    nextSlide();
+                }
+            });
+            
+            // 触摸滑动支持（移动端）
+            let startX = 0;
+            let endX = 0;
+            
+            const slider = document.querySelector('.image-slider');
+            
+            slider.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            slider.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        // 向左滑动，显示下一张
+                        nextSlide();
+                    } else {
+                        // 向右滑动，显示上一张
+                        prevSlide();
+                    }
+                }
+            }
+            
+            // 自动播放功能（可选）
+            let autoPlayInterval;
+            
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(() => {
+                    if (currentSlide < totalSlides - 1) {
+                        nextSlide();
+                    } else {
+                        showSlide(0); // 回到第一张
+                    }
+                }, 5000); // 5秒自动切换
+            }
+            
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+            
+            // 鼠标悬停时暂停自动播放
+            if (sliderSection) {
+                sliderSection.addEventListener('mouseenter', stopAutoPlay);
+                sliderSection.addEventListener('mouseleave', startAutoPlay);
+            }
+            
+            // 初始化
+            showSlide(0);
+            // startAutoPlay(); // 取消注释以启用自动播放
+            
+            // 响应式处理
+            function handleResize() {
+                // 在移动设备上调整按钮布局
+                if (window.innerWidth <= 768) {
+                    const buttonNav = document.querySelector('.button-navigation');
+                    buttonNav.style.flexDirection = 'column';
+                } else {
+                    const buttonNav = document.querySelector('.button-navigation');
+                    buttonNav.style.flexDirection = 'row';
+                }
+            }
+            
+            window.addEventListener('resize', handleResize);
+            handleResize(); // 初始调用
+        }
+        
+        // 页面加载完成后初始化图片滑动功能
+        document.addEventListener('DOMContentLoaded', function() {
+            initImageSlider();
+        });
+        
+        // 如果页面已经加载完成，直接初始化
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initImageSlider);
+        } else {
+            initImageSlider();
+        }
+    </script>
+
+    <!-- 滚动动画效果脚本 -->
+    <script>
+        // 滚动动画功能
+        function initScrollAnimation() {
+            // 获取需要动画的元素
+            const titleSection = document.querySelector('.title-section');
+            const imageSliderSection = document.querySelector('.image-slider-section');
+            if (titleSection && titleSection.classList.contains('animate') && imageSliderSection && imageSliderSection.classList.contains('animate')) return;
+            const lightingSection = document.querySelector('.lighting-section');
+            const imageShowcaseSection = document.querySelector('.image-showcase-section');
+            const blogSection = document.querySelector('.blog-section');
+            const whyChooseSection = document.querySelector('.why-choose-section');
+            const workflowSection = document.querySelector('.workflow-section');
+            
+            // 创建 Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 当元素进入视口时添加动画类
+                        entry.target.classList.add('animate');
+                        
+                        // 停止观察已动画的元素
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.3, // 当元素30%可见时触发
+                rootMargin: '0px 0px -50px 0px' // 提前50px触发
+            });
+            
+            // 观察需要动画的元素
+            if (titleSection) {
+                observer.observe(titleSection);
+            }
+            if (imageSliderSection) {
+                observer.observe(imageSliderSection);
+            }
+            if (lightingSection) {
+                observer.observe(lightingSection);
+            }
+            if (imageShowcaseSection) {
+                observer.observe(imageShowcaseSection);
+            }
+            if (blogSection) {
+                observer.observe(blogSection);
+            }
+            if (whyChooseSection) {
+                observer.observe(whyChooseSection);
+            }
+            if (workflowSection) {
+                observer.observe(workflowSection);
+            }
+        }
+        
+        // 工作流程步骤动画功能
+        function initWorkflowAnimation() {
+            const workflowSteps = document.querySelectorAll('.workflow-step');
+            
+            // 创建 Intersection Observer 用于步骤动画
+            const stepObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // 延迟动画，创造依次出现的效果
+                        setTimeout(() => {
+                            entry.target.classList.add('animate');
+                        }, index * 300); // 每个步骤延迟300ms
+                        
+                        // 停止观察已动画的元素
+                        stepObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2, // 当元素20%可见时触发
+                rootMargin: '0px 0px -30px 0px' // 提前30px触发
+            });
+            
+            // 观察所有步骤
+            workflowSteps.forEach(step => {
+                stepObserver.observe(step);
+            });
+        }
+        
+        // 页面加载完成后初始化滚动动画
+        document.addEventListener('DOMContentLoaded', function() {
+            initScrollAnimation();
+            initWorkflowAnimation();
+        });
+        
+        // 如果页面已经加载完成，直接初始化
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initScrollAnimation);
+            document.addEventListener('DOMContentLoaded', initWorkflowAnimation);
+        } else {
+            initScrollAnimation();
+            initWorkflowAnimation();
+        }
+    </script>
+</body>
+</html>
+
+

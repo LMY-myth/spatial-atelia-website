@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Studio Luma</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        .services-hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding-top: 30vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="nav-logo" href="index.html"><span class="nav-logo-light">Spatial</span><span class="nav-logo-bold">Atélia</span></a>
+            <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="architecture.html#top">Commercial <br>& Architecture</a></li>
+                <li><a href="interior-design.html">Interior Design</a></li>
+                <li><a href="furniture-rendering.html">Product Rendering</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="index.html#project-details">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="plans-hero" aria-label="Pricing plans overview">
+        <div class="plans-hero-inner">
+            <h1 class="plans-hero-title">Plans and Pricing</h1>
+            <div class="plans-hero-toggle" role="group" aria-label="Plan duration">
+                <span class="plans-toggle-text">Elite Design, Limitless Visualization, Smart Sourcing.</span>
+                <span class="plans-toggle-text">We bridge the gap between <span class="plans-toggle-save">high-end aesthetics</span> and <span class="plans-toggle-save">execution reality</span>.</span>
+            </div>
+
+            <div class="plans-card-grid" role="list">
+                <a class="plans-card" href="#residential-interiors" role="listitem">
+                    <div class="plans-card-media">
+                        <img src="image/3-interior-2.png" alt="Residential interior visualization">
+                    </div>
+                    <div class="plans-card-body">
+                        <p class="plans-card-kicker">For residential interior design</p>
+                        <h2 class="plans-card-title">Residential Interiors</h2>
+                        <p class="plans-card-desc">For Villas, Apartments, Penthouses, and Luxury Airbnbs.</p>
+                        <div class="plans-card-cta">Explore</div>
+                    </div>
+                </a>
+
+                <a class="plans-card" href="#commercial-architecture" role="listitem">
+                    <div class="plans-card-media">
+                        <img src="image/2-archi-1.png" alt="Commercial architecture concept visualization">
+                    </div>
+                    <div class="plans-card-body">
+                        <p class="plans-card-kicker">For commercial architecture concepts</p>
+                        <h2 class="plans-card-title">Commercial &amp; Architecture Concepts</h2>
+                        <p class="plans-card-desc">For Retail, Offices, F&B, Hotels, and Showrooms.</p>
+                        <div class="plans-card-cta">Explore</div>
+                    </div>
+                </a>
+
+                <a class="plans-card" href="#product-furniture-visualization" role="listitem">
+                    <div class="plans-card-media">
+                        <img src="image/4-furni-2.png" alt="Product and furniture visualization">
+                    </div>
+                    <div class="plans-card-body">
+                        <p class="plans-card-kicker">For product &amp; furniture visualization</p>
+                        <h2 class="plans-card-title">Product &amp; Furniture Visualization</h2>
+                        <p class="plans-card-desc">Photorealistic CGI for Brands & Manufacturers. Hyper-accurate materials, studio lighting, and advertising-grade composition. We create digital assets that sell products</p>
+                        <div class="plans-card-cta">Explore</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="plans-fiverr-banner">
+                <p class="plans-fiverr-text">You can also place your order securely on <strong>Fiverr</strong> — enjoy buyer protection and a 100% money-back guarantee.</p>
+                <a class="plans-fiverr-btn" href="https://www.fiverr.com/archi_dwell?source=gig_page&gigs=slug%3Adesign-high-roi-airbnb-interiors-with-amenity-maps-and-360-tours%2Cpckg_id%3A1" target="_blank" rel="noopener noreferrer">
+                    <svg class="plans-fiverr-btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16.25 16.25v-10h-4.5v-1.5c0-0.83 0.67-1.5 1.5-1.5h1.5V0h-1.5c-2.49 0-4.5 2.01-4.5 4.5v1.75H6.5v3.5h2.25v6.5h-3.5v3.5h10v-3.5h-3.5v-6.5h4.5v6.5h-1v3.5h4.5v-3.5h-1z"/></svg>
+                    Order on Fiverr
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-duo" aria-label="Residential and commercial pricing">
+        <div class="pricing-duo-inner">
+            <div class="pricing-duo-grid">
+                <article class="pricing-plan" id="residential-interiors" aria-label="Residential interior design pricing">
+                    <div class="pricing-plan-head">
+                        <h3 class="pricing-plan-title">Residential Interior Design Pricing</h3>
+                        <!--<p class="pricing-plan-slogan">Elite Design, Limitless Visualization, Smart Sourcing. We bridge the gap between high-end aesthetics and execution reality.</p>-->
+                        <div class="pricing-plan-tabs" role="tablist" aria-label="Residential pricing plans">
+                            <button class="pricing-plan-tab is-active" type="button" role="tab" aria-selected="true" data-plan="area">Area-Based <br>Pricing</button>
+                            <button class="pricing-plan-tab" type="button" role="tab" aria-selected="false" data-plan="package">Package-Based <br>Pricing</button>
+                        </div>
+                    </div>
+
+                    <div class="residential-plan-panels" aria-label="Residential plan details">
+                        <div class="residential-plan-panel is-active" data-plan="area" role="tabpanel">
+                            <!--<div class="pricing-subplan-head">
+                                <p class="pricing-subplan-slogan">For Villas, Apartments, Penthouses, and Luxury Airbnbs.</p>
+                            </div>-->
+                            <div class="pricing-plan-price" aria-label="Standard rate">$45/m²</div>
+                            <div class="pricing-table-wrap" role="region" aria-label="Area-based pricing table" tabindex="0">
+                                <table class="pricing-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Pricing Metric</th>
+                                            <th>Standard Rate</th>
+                                            <th>Minimum Engagement</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Per Square Meter</td>
+                                            <td>$45 / m²</td>
+                                            <td>$1,500 (Minimum Order)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Per Square Foot</td>
+                                            <td>$4.20 / sq.ft</td>
+                                            <td>$1,500 (Minimum Order)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="residential-plan-panel" data-plan="package" role="tabpanel" hidden>
+                            <!--<div class="pricing-subplan-head">
+                                <p class="pricing-subplan-slogan">Tailored for Luxury Homeowners, Property Developers, and Superhosts.</p>
+                            </div>-->
+                            <div class="pricing-plan-price" aria-label="Featured package">$1,299 / space</div>
+                            <div class="pricing-table-wrap" role="region" aria-label="Package-based pricing table" tabindex="0">
+                                <table class="pricing-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Plan</th>
+                                            <th>Single Space / Studio</th>
+                                            <th>Full Residence (Up to 150㎡)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Price</td>
+                                            <td>$1,299 / space</td>
+                                            <td>$3,899 / unit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Design Depth</td>
+                                            <td>Mood, Layout, Soft Furnishing</td>
+                                            <td>Comprehensive Flow &amp; Theme</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Visuals</td>
+                                            <td>Unlimited 4K Renders</td>
+                                            <td>Unlimited 4K Renders</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Revisions</td>
+                                            <td>Unlimited* (Look &amp; Feel)</td>
+                                            <td>Unlimited* (Look &amp; Feel)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tech Specs</td>
+                                            <td>Electrical Concept Layout</td>
+                                            <td>Full MEP Concept Guidance</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Supply Chain</td>
+                                            <td>Access to Factory-Direct Catalog</td>
+                                            <td>VIP Sourcing Service Included</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Delivery</td>
+                                            <td>5 - 7 Business Days</td>
+                                            <td>14 - 21 Business Days</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="pricing-included-title">Included</h3>
+                    <div class="pricing-included-grid">
+                        <ul class="pricing-list">
+                            <li><strong>Design:</strong> Full spatial planning, mood boards, and soft furnishing selection.</li>
+                            <li><strong>Visuals:</strong> Unlimited 4K Renderings &amp; Revisions (Materials/Lighting).</li>
+                            <li><strong>Tech Support:</strong> Electrical &amp; Lighting Concept Guidance (Socket/Switch logic).</li>
+                            <li><strong>Supply Chain:</strong> Access to our "Factory-Direct" catalog (Save 40-60%).</li>
+                            <li><strong>Files:</strong> Source files (.dwg/.max/.skp) included upon completion.</li>
+                        </ul>
+                        <p class="pricing-note">Note: For projects exceeding 300 m² (3,200 sq.ft), please contact us for a volume discount.</p>
+                        <button class="pricing-expand" type="button" aria-label="Expand details" aria-expanded="false" aria-controls="residential-disclaimer"></button>
+                    </div>
+
+                    <section class="pricing-disclaimer" id="residential-disclaimer" aria-label="Disclaimer" hidden>
+                        <p><strong>Unlimited Revisions:</strong> Applies to materials, colors, lighting, furniture selection, and camera angles.</p>
+                        <p><strong>Layout Freeze:</strong> Once the floor plan/structural layout is confirmed by the client, any structural changes (moving walls, changing room functions) will incur a fixed modification fee.</p>
+                        <p><strong>Source Files:</strong> Delivered upon final payment.</p>
+                        <p class="pricing-promise">Our Promise: AI accelerates our concepts, but never touches your technical files.</p>
+                    </section>
+                </article>
+
+                <article class="pricing-plan" id="commercial-architecture" aria-label="Commercial architecture design pricing">
+                    <div class="pricing-plan-head">
+                        <h3 class="pricing-plan-title">Commercial Architecture Design Pricing</h3>
+                        <!--<p class="pricing-plan-slogan">For Retail, Offices, F&amp;B, Hotels, and Showrooms.</p>-->
+                    </div>
+
+                    <div class="commercial-plan-grid" aria-label="Commercial plan details">
+                        <div class="commercial-plan-left">
+                            <div class="pricing-plan-price" aria-label="Standard rate">$65/m²</div>
+                            <div class="pricing-table-wrap" role="region" aria-label="Commercial pricing table" tabindex="0">
+                                <table class="pricing-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Pricing Metric</th>
+                                            <th>Standard Rate</th>
+                                            <th>Minimum Engagement</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Per Square Meter</td>
+                                            <td>$65 / m²</td>
+                                            <td>$3,500 (Minimum Order)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Per Square Foot</td>
+                                            <td>$6.00 / sq.ft</td>
+                                            <td>$3,500 (Minimum Order)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="commercial-plan-right">
+                            <h3 class="pricing-included-title">included</h3>
+                            <div class="pricing-included-grid">
+                                <ul class="pricing-list">
+                                    <li><strong>Architecture:</strong> Massing, Facade Design, and Exterior Form (Non-Structural).</li>
+                                    <li><strong>Commercial Interior:</strong> Branding integration, customer flow optimization.</li>
+                                    <li><strong>MEP Guidance:</strong> HVAC routing concepts, Commercial Lighting Plotting, Power Data Logic.</li>
+                                    <li><strong>Construction Guide:</strong> Key node detailing (Joinery/Material transitions) for local contractors.</li>
+                                    <li><strong>Marketing Assets:</strong> 8K "Billboard-Ready" Renders for pre-launch advertising.</li>
+                                </ul>
+                            </div>
+
+                            <section class="pricing-disclaimer" aria-label="Disclaimer">
+                                <p><strong>Unlimited Revisions:</strong> Applies to materials, colors, lighting, furniture selection, and camera angles.</p>
+                                <p><strong>Layout Freeze:</strong> Once the floor plan/structural layout is confirmed by the client, any structural changes (moving walls, changing room functions) will incur a fixed modification fee.</p>
+                                <p><strong>Source Files:</strong> Delivered upon final payment.</p>
+                                <p class="pricing-promise">Our Promise: AI accelerates our concepts, but never touches your technical files.</p>
+                            </section>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-duo" aria-label="Product and furniture visualization pricing">
+        <div class="pricing-duo-inner">
+            <div class="pricing-duo-grid">
+                <article class="pricing-plan" id="product-furniture-visualization" aria-label="Product and furniture visualization pricing">
+                    <div class="pricing-plan-head">
+                        <h3 class="pricing-plan-title">Product &amp; Furniture Visualization</h3>
+                        <!--<p class="pricing-plan-slogan">Photorealistic CGI for Brands &amp; Manufacturers.</p>
+                        <p class="pricing-plan-slogan">Hyper-accurate materials, studio lighting, and advertising-grade composition. We create digital assets that sell products.</p>-->
+                        <div class="pricing-plan-tabs" role="tablist" aria-label="Product visualization pricing plans">
+                            <button class="pricing-plan-tab is-active" type="button" role="tab" aria-selected="true" data-plan="studio">Studio Hero <br>Shot</button>
+                            <button class="pricing-plan-tab" type="button" role="tab" aria-selected="false" data-plan="editorial">Editorial Lifestyle <br>Scene</button>
+                        </div>
+                    </div>
+
+                    <div class="product-plan-panels" aria-label="Product visualization plan details">
+                        <div class="product-plan-panel is-active" data-plan="studio" role="tabpanel">
+                            <div class="pricing-subplan-head">
+                                <p class="pricing-subplan-slogan">Best for: E-commerce main images (Amazon/Shopify), Catalogues, Product Configurators.</p>
+                            </div>
+
+                            <div class="pricing-table-wrap" role="region" aria-label="Studio hero shot pricing table" tabindex="0">
+                                <table class="pricing-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Service</th>
+                                            <th>Price Per Image</th>
+                                            <th>Deliverables &amp; Specs</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Single Product (Standard)</td>
+                                            <td>$350 - $500</td>
+                                            <td>Clean white/neutral background. Focus on material realism (fabrics, wood grain, metals).</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Complex Product / Set</td>
+                                            <td>$600 - $900</td>
+                                            <td>Items with complex geometry or multi-piece sets (e.g., dining set with 6 chairs).</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3 class="pricing-included-title">Service Notes</h3>
+                            <div class="pricing-included-grid">
+                                <ul class="pricing-list">
+                                    <li><strong>Includes:</strong> 3 rounds of revisions on lighting/materials.</li>
+                                    <li><strong>Resolution:</strong> 4K (suitable for retina displays and zoom-in functionality).</li>
+                                    <li><strong>Add-on:</strong> 360° Turntable Animation (+ $800 / SKU).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="product-plan-panel" data-plan="editorial" role="tabpanel" hidden>
+                            <div class="pricing-subplan-head">
+                                <p class="pricing-subplan-slogan">Best for: Advertising campaigns, Social Media (Instagram/Pinterest ads), Brand Lookbooks.</p>
+                            </div>
+
+                            <div class="pricing-table-wrap" role="region" aria-label="Editorial lifestyle pricing table" tabindex="0">
+                                <table class="pricing-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Service</th>
+                                            <th>Price Per Image</th>
+                                            <th>Deliverables &amp; Specs</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Standard Scene</td>
+                                            <td>$800 - $1,200</td>
+                                            <td>Product placed in a curated, pre-designed high-end environment.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bespoke Campaign</td>
+                                            <td>$1,500 - $2,500+</td>
+                                            <td>Custom-built environment designed specifically around the product's narrative. Creative direction included.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3 class="pricing-included-title">Service Notes</h3>
+                            <div class="pricing-included-grid">
+                                <ul class="pricing-list">
+                                    <li><strong>Creative Value:</strong> We don't just render; we perform "virtual set styling" to enhance the product's perceived value.</li>
+                                    <li><strong>Resolution:</strong> up to 8K (suitable for large format printing/billboards).</li>
+                                    <li><strong>Flexibility:</strong> Easily swap colors/materials of the product within the same scene for variation shots.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pricing-plan" id="premium-addons" aria-label="Premium add-ons and extra services">
+                    <div class="pricing-plan-head">
+                        <h3 class="pricing-plan-title">Premium Add-Ons</h3>
+                        <!--<p class="pricing-plan-slogan">Extra Services (增值服务)</p>-->
+                    </div>
+
+                    <!--<p class="pricing-plan-desc">为满足个性化升级需求，提供可灵活选择的附加服务，让设计体验更完善：在基础设计服务之外，我们提供以下定制化增值选项，可按需升级</p>-->
+
+                    <div class="pricing-table-wrap" role="region" aria-label="Extra services table" tabindex="0">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Price</th>
+                                    <th>Note</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cinematic Walkthrough</td>
+                                    <td>$499 / min</td>
+                                    <td>4K 60fps, high-bitrate video.</td>
+                                </tr>
+                                <tr>
+                                    <td>360° VR Tour</td>
+                                    <td>$199 / point</td>
+                                    <td>Hosted on cloud for 12 months.</td>
+                                </tr>
+                                <tr>
+                                    <td>Source File Buyout</td>
+                                    <td>Included</td>
+                                    <td>We provide .max / .skp files for free.</td>
+                                </tr>
+                                <tr>
+                                    <td>Rush Delivery (48h)</td>
+                                    <td>+30% Total</td>
+                                    <td>Priority rendering queue.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <section class="pricing-disclaimer" aria-label="Disclaimer">
+                        <p><strong>Unlimited Revisions:</strong> Applies to materials, colors, lighting, furniture selection, and camera angles.</p>
+                        <p><strong>Layout Freeze:</strong> Once the floor plan/structural layout is confirmed by the client, any structural changes (moving walls, changing room functions) will incur a fixed modification fee.</p>
+                        <p><strong>Source Files:</strong> Delivered upon final payment.</p>
+                        <p class="pricing-promise">Our Promise: AI accelerates our concepts, but never touches your technical files.</p>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-duo" aria-label="Factory direct advantage and premium add-ons">
+        <div class="pricing-duo-inner">
+            <div class="pricing-duo-grid">
+                <article class="pricing-plan" id="factory-direct-advantage" aria-label="Factory-direct sourcing advantage">
+                    <div class="pricing-plan-head">
+                        <h3 class="pricing-plan-title"><strong>Factory-Direct</strong> Advantage</h3>
+                        <p class="pricing-plan-slogan">Same Quality, 1/3 of the Price. Direct from the Source.</p>
+                    </div>
+
+                    <p class="pricing-plan-desc">We cut out the middlemen. Our team is based in the world's furniture manufacturing hub. We connect you directly to the OEM factories that produce for top global luxury brands.</p>
+
+                    <div class="pricing-table-wrap" role="region" aria-label="Factory-direct comparison table" tabindex="0">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Item Category</th>
+                                    <th>Retail Price (US/EU)</th>
+                                    <th>Our Factory-Direct Price</th>
+                                    <th>Quality Assurance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Luxury Sofa (3-Seater)</td>
+                                    <td>$8,000 - $12,000</td>
+                                    <td>$1,500 - $2,500</td>
+                                    <td>Top-grain Nappa leather, High-density memory foam, Solid Larch wood frame.</td>
+                                </tr>
+                                <tr>
+                                    <td>Designer Chandelier</td>
+                                    <td>$3,500 - $5,000</td>
+                                    <td>$600 - $900</td>
+                                    <td>K9 Crystal / Alabaster, High-grade brass plating, 110V-240V certified drivers.</td>
+                                </tr>
+                                <tr>
+                                    <td>Stone Dining Table</td>
+                                    <td>$4,000+</td>
+                                    <td>$800 - $1,200</td>
+                                    <td>Sintered Stone or Natural Marble, Stainless steel base, Custom sizing available.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="pricing-included-title">Logistics &amp; Shipping</h3>
+                    <div class="pricing-included-grid">
+                        <ul class="pricing-list">
+                            <li><strong>Door-to-Door Service:</strong> We handle customs, duties, and sea freight. You just wait for delivery.</li>
+                            <li><strong>Inspection:</strong> Video inspection of goods before crating.</li>
+                            <li><strong>Cost:</strong> Even with shipping included, you typically save 40-60% compared to buying locally.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <aside class="bulk-discount" aria-label="Bulk catalog volume discount">
+                    <div class="bulk-discount-layout">
+                        <div class="bulk-discount-copy">
+                            <h3 class="bulk-discount-title">📢 Bulk Catalog Volume Discount <span class="bulk-discount-title-note">For manufacturers needing <span class="bulk-discount-title-note-break">20+ SKUs rendered</span></span></h3>
+                            <p class="bulk-discount-text">Don't pay agency prices for bulk work. We offer significant discounts for large catalog projects using our efficient AI-enhanced pipeline.</p>
+                            <ul class="bulk-discount-list">
+                                <li><strong>20-50 Images:</strong> 15% Off total</li>
+                                <li><strong>50+ Images:</strong> Contact for enterprise pricing &amp; dedicated team.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bulk-discount-art" aria-hidden="true">
+                            <svg viewBox="0 0 360 240" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="bulkDiscountBg" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0" stop-color="#dff4ff" />
+                                        <stop offset="1" stop-color="#f3f7ff" />
+                                    </linearGradient>
+                                    <linearGradient id="bulkDiscountTag" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0" stop-color="#141a1b" />
+                                        <stop offset="1" stop-color="#2b6b76" />
+                                    </linearGradient>
+                                </defs>
+
+                                <rect x="0" y="0" width="360" height="240" rx="22" fill="url(#bulkDiscountBg)" />
+                                <circle cx="300" cy="60" r="36" fill="#ffd24d" opacity="0.85" />
+                                <circle cx="320" cy="88" r="18" fill="#7ae0ff" opacity="0.55" />
+
+                                <g transform="translate(126 74)">
+                                    <path d="M18 0h152c10 0 18 8 18 18v52c0 10-8 18-18 18H52l-26 26v-26H18C8 88 0 80 0 70V18C0 8 8 0 18 0z" fill="url(#bulkDiscountTag)" />
+                                    <circle cx="40" cy="42" r="12" fill="#ffffff" opacity="0.92" />
+                                    <path d="M40 31c4 0 7 3 7 7" stroke="#141a1b" stroke-width="3" stroke-linecap="round" opacity="0.55" />
+                                    <path d="M33 42c0 4 3 7 7 7s7-3 7-7-3-7-7-7" fill="none" stroke="#141a1b" stroke-width="3" stroke-linecap="round" opacity="0.55" />
+                                    <text x="78" y="40" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#ffffff">BULK</text>
+                                    <text x="78" y="62" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#ffffff">15% OFF</text>
+                                </g>
+
+                                <g opacity="0.2" fill="#141a1b">
+                                    <rect x="34" y="46" width="70" height="8" rx="4" />
+                                    <rect x="34" y="64" width="98" height="8" rx="4" />
+                                    <rect x="34" y="82" width="80" height="8" rx="4" />
+                                </g>
+
+                                <path d="M58 180c40-40 90-44 152-22" fill="none" stroke="#2b6b76" stroke-width="8" stroke-linecap="round" opacity="0.35" />
+                                <path d="M82 196c26-28 60-34 104-20" fill="none" stroke="#141a1b" stroke-width="8" stroke-linecap="round" opacity="0.18" />
+                            </svg>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目详情部分
+    <section class="portfolio-details-section">
+        <div class="container">
+            <h2 class="section-title">Our Design Portfolio</h2>
+            <p>Explore our latest interior design projects</p>
+            <div class="portfolio-details-grid">
+                <div class="portfolio-detail-card">
+                    <div class="portfolio-detail-image">
+                        <img src="../image/p9.jpg" alt="现代办公项目">
+                    </div>
+                    <div class="portfolio-detail-content">
+                        <h3>Functional Office Space Design</h3>
+                        <p class="project-description">Focused on enhancing team efficiency and employee experience, this modern office design blends open collaboration zones with quiet focus areas, fostering a creative and productive work environment. </p>
+                        <div class="project-info">
+                            <div class="info-item">
+                                <span class="label">Project Type:</span>
+                                <span class="value">Commercial Space</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Design Style:</span>
+                                <span class="value">Modern Minimalism</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Completion Date:</span>
+                                <span class="value">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-detail-card">
+                    <div class="portfolio-detail-image">
+                        <img src="../image/p10.jpg" alt="餐厅设计项目">
+                    </div>
+                    <div class="portfolio-detail-content">
+                        <h3>Boutique Restaurant Design</h3>
+                        <p class="project-description">An interior design crafted for a high-end restaurant, emphasizing the perfect integration of dining experiences and brand identity to create a unique dining atmosphere.  </p>
+                        <div class="project-info">
+                            <div class="info-item">
+                                <span class="label">Project Type:</span>
+                                <span class="value">Commercial Space</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Design Style:</span>
+                                <span class="value">Modern Luxury</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Completion Date:</span>
+                                <span class="value">2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-detail-card">
+                    <div class="portfolio-detail-image">
+                        <img src="../image/p11.jpg" alt="现代客厅项目">
+                    </div>
+                    <div class="portfolio-detail-content">
+                        <h3>Modern Living Room Design</h3>
+                        <p class="project-description"> This project showcases a contemporary minimalist living room design with an open layout, maximizing natural light to create a warm and comfortable living environment. </p>
+                        <div class="project-info">
+                            <div class="info-item">
+                                <span class="label">Project Type:</span>
+                                <span class="value">Residential Design</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Design Style:</span>
+                                <span class="value">Modern Minimalism</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Completion Date:</span>
+                                <span class="value">2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-detail-card">
+                    <div class="portfolio-detail-image">
+                        <img src="../image/p12.jpg" alt="餐厅设计项目">
+                    </div>
+                    <div class="portfolio-detail-content">
+                        <h3>Resort-Style Pool Design</h3>
+                        <p class="project-description">Creating a luxurious and leisurely pool space using premium materials and sophisticated lighting, crafting an urban oasis that encourages relaxation and private moments.  </p>
+                        <div class="project-info">
+                            <div class="info-item">
+                                <span class="label">Project Type:</span>
+                                <span class="value">Residential Space</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Design Style:</span>
+                                <span class="value">Modern Luxury</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Completion Date:</span>
+                                <span class="value">2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Spatial Atélia</h3>
+                    <p>Creating unique Interior & Architecture experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="architecture.html">Commercial & Architecture</a></p>
+                    <p><a href="interior-design.html">Interior Design</a></p>
+                    <p><a href="furniture-rendering.html">Production & Furniture Rendering</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contect Us</h4>
+                    <p>+1 808 9917 199</p>
+                    <p>allenwang.awdesign@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.fiverr.com/archi_dwell?source=gig_page&gigs=slug%3Adesign-high-roi-airbnb-interiors-with-amenity-maps-and-360-tours%2Cpckg_id%3A1" target="_blank" rel="noopener noreferrer" class="footer-fiverr" aria-label="Fiverr"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16.25 16.25v-10h-4.5v-1.5c0-0.83 0.67-1.5 1.5-1.5h1.5V0h-1.5c-2.49 0-4.5 2.01-4.5 4.5v1.75H6.5v3.5h2.25v6.5h-3.5v3.5h10v-3.5h-3.5v-6.5h4.5v6.5h-1v3.5h4.5v-3.5h-1z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Spatial Atélia. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

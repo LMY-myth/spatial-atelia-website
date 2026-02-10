@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture - Studio Luma</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0">
+        <defs>
+          <clipPath id="clip-services-hero" clipPathUnits="objectBoundingBox">
+            <path d="M0,0 H1 V0.85 Q0.7,1 0,0.9 Z" />
+          </clipPath>
+        </defs>
+      </svg>
+      <!-- 导航栏 -->
+      <nav class="navbar">
+          <div class="nav-container">
+              <a class="nav-logo" href="index.html"><span class="nav-logo-light">Spatial</span><span class="nav-logo-bold">Atélia</span></a>
+              <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+              </button>
+              <ul class="nav-menu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="architecture.html#top">Commercial <br>& Architecture</a></li>
+                  <li><a href="interior-design.html">Interior Design</a></li>
+                  <li><a href="furniture-rendering.html">Product Rendering</a></li>
+                  <li><a href="pricing.html">Pricing</a></li>
+                  <li><a href="index.html#project-details">About</a></li>
+              </ul>
+          </div>
+      </nav>
+
+      <div id="top"></div>
+  
+
+    <!-- 首页 Split Hero (Architecture) -->
+    <section class="split-hero split-hero--white">
+        <div class="split-hero-media" role="img" aria-label="Modern architecture exterior">
+            <img src="image/2-archi-1.png" alt="Modern architecture exterior">
+        </div>
+        <div class="split-hero-panel">
+            <div class="split-hero-content">
+                <h1 class="split-hero-title">COMMERCIAL<br>& ARCHITECTURE</h1>
+                <p class="split-hero-desc">From concept to Buildy — shaping buildings with a strong sense of place.</p>
+                <a class="split-hero-link" href="pricing.html">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 光照页面 -->
+    <section class="lighting-section">
+        <div class="container">
+            <div class="lighting-content">
+                <div class="lighting-text">
+                    <span class="lighting-subtitle">Explore S.A.</span>
+                    <h2 class="lighting-title">From Concept to Buildy</h2>
+                    <p class="lighting-description">
+                        Craft timeless, human‑centered structures and spaces.<strong></strong> <strong></strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 图片展示页面 -->
+    <section class="image-showcase-section">
+        <div class="image-showcase-grid">
+            <div class="showcase-item" data-text="Modern Interior Design - Creating spaces that inspire and comfort">
+                <img src="image/2-archi-2.png" alt="Modern interior design showcase">
+                <div class="showcase-overlay">
+                    <div class="showcase-content">
+                        <h3>Architecture Design</h3>
+                        <p>Professional 3D Modeling & Rendering | Tailored Visuals for Residential Projects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-item" data-text="Luxury Living Spaces - Where elegance meets functionality">
+                <img src="image/3-interior-3.jpg" alt="Luxury living space showcase">
+                <div class="showcase-overlay">
+                    <div class="showcase-content">
+                        <h3>Commercial Spaces</h3>
+                        <p>Enhance both aesthetics and functionality, ensuring every design detail aligns with business goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <!-- 三行标题部分 -->
+    <section class="title-section">
+        <div class="title-container">
+            <h3 class="title-small">DESIGN BY S.A.</h3>
+            <h1 class="title-main">Unlimited Revisions & Cinematic-Quality Renders</h1>
+            <p class="title-description">Your satisfaction is always our top priority—let’s make your dream space a reality.</p>
+        </div>
+    </section>
+       <!-- 图片滑动切换页面 -->
+       <section class="image-slider-section">
+        <div class="slider-container">
+            <!-- 主图片展示区域 -->
+            <div class="main-image-container">
+                <div class="image-slider">
+                    <div class="slide active" data-category="hotel">
+                        <img src="image/3-interior-5-7.png" alt="Hotel">
+                    </div>
+                    <div class="slide" data-category="airbnb">
+                        <img src="image/1-index-9-4.jpg" alt="Airbnb">
+                    </div>
+                    <div class="slide" data-category="cafe-bar">
+                        <img src="image/3-interior-5-1.png" alt="Cafe & Bar">
+                    </div>
+                    <div class="slide" data-category="spa-pool">
+                        <img src="image/1-index-9-5.png" alt="Spa & Pool">
+                    </div>
+                    <div class="slide" data-category="office-workplace">
+                        <img src="image/3-interior-5-2.jpg" alt="Office & Workplace">
+                    </div>
+                    <div class="slide" data-category="restaurant">
+                        <img src="image/3-interior-5-3.jpg" alt="Restaurant">
+                    </div>
+                    <div class="slide" data-category="retail">
+                        <img src="image/2-archi-4.png" alt="Retail">
+                    </div>
+                    <div class="slide" data-category="gym">
+                        <img src="image/1-index-9-6.jpg" alt="Gym">
+                    </div>
+                    <div class="slide" data-category="cinema">
+                        <img src="image/1-index-9-7.jpg" alt="Cinema">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 底部按钮导航区域 -->
+            <div class="button-navigation">
+                <button class="nav-arrow prev-arrow" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="hotel">
+                        <div class="btn-icon">
+                            <i class="fa-solid fa-hotel"></i>
+                        </div>
+                        <span>Hotel</span>
+                    </button>
+                    <button class="category-btn" data-category="airbnb">
+                        <div class="btn-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <span>Airbnb</span>
+                    </button>
+                    <button class="category-btn" data-category="cafe-bar">
+                        <div class="btn-icon">
+                            <i class="fa-solid fa-mug-saucer"></i>
+                        </div>
+                        <span>Cafe &amp; Bar</span>
+                    </button>
+                    <button class="category-btn" data-category="spa-pool">
+                        <div class="btn-icon">
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+                        <span>Spa &amp; Pool</span>
+                    </button>
+                    <button class="category-btn" data-category="office-workplace">
+                        <div class="btn-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span>Office &amp; Workplace</span>
+                    </button>
+                    <button class="category-btn" data-category="restaurant">
+                        <div class="btn-icon">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <span>Restaurant</span>
+                    </button>
+                    <button class="category-btn" data-category="retail">
+                        <div class="btn-icon">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                        <span>Retail</span>
+                    </button>
+                    <button class="category-btn" data-category="gym">
+                        <div class="btn-icon">
+                            <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                        <span>Gym</span>
+                    </button>
+                    <button class="category-btn" data-category="cinema">
+                        <div class="btn-icon">
+                            <i class="fa-solid fa-film"></i>
+                        </div>
+                        <span>Cinema</span>
+                    </button>
+                </div>
+                
+                <button class="nav-arrow next-arrow" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 博客文章展示页面 -->
+          <section class="blog-section">
+              <div class="blog-container">
+                  <!-- 三行标题部分 -->           
+                  <div class="blog-title-section">
+                      <h1 class="blog-title-main">Modern Commercial Space</h1>
+                      <p class="blog-title-description">
+                        Let’s collaborate to create a stunning, functional space that drives customer engagement and business success.</p>
+                  </div>
+                  
+                  <!-- 两行三列图片展示网格 -->
+                  <div class="blog-grid">
+                      <!-- 第一行 -->
+                      
+                      <article class="blog-card">
+                          <div class="blog-image">
+                              <img src="image/3-interior-5-2.jpg" alt="Light animation techniques">
+                          </div>
+                          <div class="blog-meta">
+                              <span class="blog-date">Feb 28, 2025</span>
+                              <span class="blog-categories">Guides | Rendering Tips</span>
+                          </div>
+                          <h2 class="blog-card-title">Office & Workplace</h2>
+                      </article>
+                      <article class="blog-card">
+                          <div class="blog-image">
+                              <img src="image/3-interior-5-1.png" alt="Fast asset control techniques">
+                          </div>
+                          <div class="blog-meta">
+                              <span class="blog-date">Mar 10, 2025</span>
+                              <span class="blog-categories">Guides | Rendering Tips</span>
+                          </div>
+                          <h2 class="blog-card-title">Cafés & Bar</h2>
+                      </article>
+                      
+                      <article class="blog-card">
+                          <div class="blog-image">
+                              <img src="image/3-interior-5-3.jpg" alt="Natural lighting techniques">
+                          </div>
+                          <div class="blog-meta">
+                              <span class="blog-date">Aug 28, 2024</span>
+                              <span class="blog-categories">Guides</span>
+                          </div>
+                          <h2 class="blog-card-title">Restaurants</h2>
+                      </article>
+                      
+                      <!-- 第二行 -->
+                      <article class="blog-card">
+                          <div class="blog-image">
+                              <img src="image/3-interior-5-4.png" alt="Interior design inspiration">
+                          </div>
+                          <div class="blog-meta">
+                              <span class="blog-date">Jul 15, 2024</span>
+                              <span class="blog-categories">Inspiration | Design</span>
+                          </div>
+                          <h2 class="blog-card-title">Pools</h2>
+                      </article>
+                      
+                      <article class="blog-card">
+                          <div class="blog-image">
+                              <img src="image/3-interior-5-5.png" alt="Commercial space design">
+                          </div>
+                          <div class="blog-meta">
+                              <span class="blog-date">Jun 22, 2024</span>
+                              <span class="blog-categories">Commercial | Design</span>
+                          </div>
+                          <h2 class="blog-card-title">Renovation</h2>
+                      </article>
+                      
+                      <article class="blog-card">
+                          <div class="blog-image">
+                              <img src="image/3-interior-5-8.jpg" alt="Plant styling tips">
+                          </div>
+                          <div class="blog-meta">
+                              <span class="blog-date">May 30, 2024</span>
+                              <span class="blog-categories">Styling | Tips</span>
+                          </div>
+                          <h2 class="blog-card-title">Cinema</h2>
+                      </article>
+                      <article class="blog-card">
+                          <div class="blog-image">
+                              <img src="image/3-interior-5-7.png" alt="Plant styling tips">
+                          </div>
+                          <div class="blog-meta">
+                              <span class="blog-date">May 30, 2024</span>
+                              <span class="blog-categories">Styling | Tips</span>
+                          </div>
+                          <h2 class="blog-card-title">Hotel</h2>
+                      </article>
+                      <article class="blog-card">
+                          <div class="blog-image">
+                              <img src="image/3-interior-5-6.jpg" alt="Plant styling tips">
+                          </div>
+                          <div class="blog-meta">
+                              <span class="blog-date">May 30, 2024</span>
+                              <span class="blog-categories">Styling | Tips</span>
+                          </div>
+                          <h2 class="blog-card-title">Airbnb</h2>
+                      </article>
+                  </div>
+              </div>
+          </section>
+
+    <!-- Modern Commercial Space 三图展示 -->
+    <section class="commercial-gallery-section">
+        <div class="commercial-container">
+            <h2 class="commercial-title">Modern Commercial Space</h2>
+            <p class="commercial-subtitle">Enhance both aesthetics and functionality, ensuring every design detail aligns with your business goals.</p>
+            <div class="commercial-grid">
+                <figure class="commercial-card">
+                    <img src="image/1-index-9-1.png" alt="Office & Workplace" class="commercial-img">
+                    <figcaption class="commercial-caption">Office & Workplace</figcaption>
+                </figure>
+                <figure class="commercial-card">
+                    <img src="image/1-index-9-2.jpg" alt="Restaurant" class="commercial-img">
+                    <figcaption class="commercial-caption">Restaurant</figcaption>
+                </figure>
+                <figure class="commercial-card">
+                    <img src="image/1-index-9-3.jpg" alt="Bar & Retail" class="commercial-img">
+                    <figcaption class="commercial-caption">Cafe & Bar & Retail</figcaption>
+                </figure>
+                <figure class="commercial-card">
+                    <img src="image/1-index-9-4.jpg" alt="Office & Workplace" class="commercial-img">
+                    <figcaption class="commercial-caption">Hotel & Airbnb</figcaption>
+                </figure>
+                <figure class="commercial-card">
+                    <img src="image/1-index-9-5.png" alt="Restaurant" class="commercial-img">
+                    <figcaption class="commercial-caption">Spa & Pool</figcaption>
+                </figure>
+                <figure class="commercial-card">
+                    <img src="image/1-index-9-6.jpg" alt="Bar & Retail" class="commercial-img">
+                    <figcaption class="commercial-caption">Gym</figcaption>
+                </figure>
+                <figure class="commercial-card">
+                    <img src="image/1-index-9-7.jpg" alt="Bar & Retail" class="commercial-img">
+                    <figcaption class="commercial-caption">Cinema</figcaption>
+                </figure>
+                <figure class="commercial-card">
+                    <img src="image/3-interior-5-5.png" alt="Bar & Retail" class="commercial-img">
+                    <figcaption class="commercial-caption">Renovation</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us 部分 -->
+    <section class="usp-video-accordion-section" aria-label="Why Choose Spatial Atélia">
+        <div class="usp-video-accordion-container">
+            <div class="usp-video-accordion-left">
+                <h2 class="usp-video-accordion-title">Why Choose Spatial Atélia?</h2>
+                <p class="usp-video-accordion-subtitle">Your one-stop destination to transform your space.</p>
+
+                <div class="usp-accordion" id="usp-accordion">
+                    <div class="usp-accordion-item" data-video="image/3-interior-video-1.mp4">
+                        <button class="usp-accordion-header" type="button" aria-expanded="false">
+                            <span class="usp-accordion-label">FAST DELIVERY</span>
+                            <span class="usp-accordion-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="usp-accordion-panel">
+                            <p class="usp-accordion-text">3+7 Days of a single room</p>
+                            <p class="usp-accordion-text">5+7 Days for designing multiple rooms</p>
+                            <p class="usp-accordion-text">10+10 Days of a larger-scale project</p>
+                        </div>
+                    </div>
+
+                    <div class="usp-accordion-item" data-video="image/3-interior-video-2.mp4">
+                        <button class="usp-accordion-header" type="button" aria-expanded="false">
+                            <span class="usp-accordion-label">UNLIMITED REVISIONS</span>
+                            <span class="usp-accordion-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="usp-accordion-panel">
+                            <p class="usp-accordion-text">I offer unlimited revisions until you're completely satisfied with the final result.</p>
+                        </div>
+                    </div>
+
+                    <div class="usp-accordion-item" data-video="image/3-interior-video-3.mp4">
+                        <button class="usp-accordion-header" type="button" aria-expanded="false">
+                            <span class="usp-accordion-label">UNLIMITED RENDERS</span>
+                            <span class="usp-accordion-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="usp-accordion-panel">
+                            <p class="usp-accordion-text">You will get cinematic-quality CGI renders with natural lighting and material details.</p>
+                        </div>
+                    </div>
+
+                    <div class="usp-accordion-item" data-video="image/3-interior-video-4.mp4">
+                        <button class="usp-accordion-header" type="button" aria-expanded="false">
+                            <span class="usp-accordion-label">HIGH QUALITY GUARANTEE</span>
+                            <span class="usp-accordion-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="usp-accordion-panel">
+                            <p class="usp-accordion-text">High-quality service for all your design needs, always available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usp-video-accordion-right">
+                <div class="usp-video-frame">
+                    <video class="usp-video" id="usp-accordion-video" autoplay muted loop playsinline preload="metadata">
+                        <source id="usp-accordion-video-source" src="image/3-interior-video-1.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作流程图部分 -->
+    <section class="workflow-section">
+        <div class="workflow-container">
+            <!-- 左侧标题区域 -->
+            <div class="workflow-left">
+                <h1 class="workflow-title">Workflow</h1>
+                <div class="workflow-image">
+                    <img src="image/workflow.png" alt="Workflow Process">
+                </div>
+            </div>
+            
+            <!-- 右侧工作步骤区域 -->
+            <div class="workflow-right">
+                <div class="workflow-steps">
+                    <!-- 步骤1：建模阶段 -->
+                    <div class="workflow-step step-1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Modeling Stage</h3>
+                            <p class="step-description">
+                                <strong>This is the initial stage</strong> where you suggest changes and we will plan the space according to your needs and intended style. This includes the functional layout and style choices, and we will proceed to the next step after we have received your approval of the model.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 步骤2：低分辨率渲染阶段 -->
+                    <div class="workflow-step step-2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Low Resolution Rendering Stage</h3>
+                            <p class="step-description">
+                                <strong>This is a key stage</strong> for you to suggest changes and we will continue to modify the project based on your comments until we have your approval. We will show you alower resolution rendering of the finished project, where you can make specific adjustments to all the design elements such as layout, shape, materials election, and color scheme.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 步骤3：高分辨率渲染阶段 -->
+                    <div class="workflow-step step-3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">High Resolution Rendering Stage</h3>
+                            <p class="step-description">
+                                <strong>This is the final stage</strong> of our work, after all the details have been confirmed, we will carryout the real rendering, which usually takes a few hours(90 minutes or so for a single sheet). Of course, if you find that you have missed a design detail, don’t worry, you are always welcome, you can always ask and we will correct it (this may result in a longer working time)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta-section" aria-label="Project inquiry">
+        <div class="contact-cta-container">
+            <h2 class="contact-cta-title">Ready to Start Your Project?</h2>
+            <p class="contact-cta-subtitle">Get in touch with our team, and let's craft one-of-a-kind commercial spaces collaboratively.</p>
+            <div class="contact-cta-buttons">
+                <a class="contact-cta-button" href="pricing.html">See Pricing</a>
+                <a class="contact-cta-button contact-cta-button--fiverr" href="https://www.fiverr.com/archi_dwell?source=gig_page&gigs=slug%3Adesign-high-roi-airbnb-interiors-with-amenity-maps-and-360-tours%2Cpckg_id%3A1" target="_blank" rel="noopener noreferrer">
+                    <svg class="fiverr-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16.25 16.25v-10h-4.5v-1.5c0-0.83 0.67-1.5 1.5-1.5h1.5V0h-1.5c-2.49 0-4.5 2.01-4.5 4.5v1.75H6.5v3.5h2.25v6.5h-3.5v3.5h10v-3.5h-3.5v-6.5h4.5v6.5h-1v3.5h4.5v-3.5h-1z"/></svg>
+                    Order on Fiverr
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Spatial Atélia</h3>
+                    <p>Creating unique Interior & Architecture experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="architecture.html">Commercial & Architecture</a></p>
+                    <p><a href="interior-design.html">Interior Design</a></p>
+                    <p><a href="furniture-rendering.html">Production & Furniture Rendering</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contect Us</h4>
+                    <p>+1 808 9917 199</p>
+                    <p>allenwang.awdesign@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.fiverr.com/archi_dwell?source=gig_page&gigs=slug%3Adesign-high-roi-airbnb-interiors-with-amenity-maps-and-360-tours%2Cpckg_id%3A1" target="_blank" rel="noopener noreferrer" class="footer-fiverr" aria-label="Fiverr"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16.25 16.25v-10h-4.5v-1.5c0-0.83 0.67-1.5 1.5-1.5h1.5V0h-1.5c-2.49 0-4.5 2.01-4.5 4.5v1.75H6.5v3.5h2.25v6.5h-3.5v3.5h10v-3.5h-3.5v-6.5h4.5v6.5h-1v3.5h4.5v-3.5h-1z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Spatial Atélia. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
