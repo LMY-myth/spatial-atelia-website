@@ -1013,6 +1013,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   })();
 
+  /* ---------- Back to Top Button ---------- */
+  (function initBackToTop() {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="M18 15l-6-6-6 6"/>' +
+      '</svg>';
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 600) {
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    });
+
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+
   /* ---------- Contact form → mailto handler ---------- */
   (function initContactForm() {
     var form = document.querySelector('.contact-form-new');

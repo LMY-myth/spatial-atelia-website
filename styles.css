@@ -542,6 +542,45 @@ h3 {
     }
 }
 
+/* --- Back to Top Button --- */
+.back-to-top {
+    position: fixed;
+    right: 28px;
+    bottom: 110px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(43, 107, 118, 0.85);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background 0.2s;
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: rgba(43, 107, 118, 1);
+    transform: translateY(-2px);
+}
+
+.back-to-top svg {
+    width: 20px;
+    height: 20px;
+}
+
 .crisp-chat-bubble {
     position: fixed;
     right: 24px;
