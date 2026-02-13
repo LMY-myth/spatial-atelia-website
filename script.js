@@ -1104,12 +1104,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------- Past Projects Slider ---------- */
   (function initProjectSlider() {
-    var cards = document.querySelectorAll('.project-card[data-project]');
+    var cards = document.querySelectorAll('[data-project]');
     if (!cards.length) return;
 
     cards.forEach(function (card) {
-      var cover = card.querySelector('.project-card-cover');
-      var info = card.querySelector('.project-card-info');
+      var cover = card.querySelector('.project-card-cover') || card.querySelector('.blog-image');
+      var info = card.querySelector('.project-card-info') || card.querySelector('.blog-card-title');
       var wrap = card.querySelector('.project-slider-wrap');
       var slider = card.querySelector('.project-slider');
       var prevBtn = card.querySelector('.project-slider-nav--prev');
@@ -1117,7 +1117,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       function toggle() {
         var wasOpen = card.classList.contains('is-expanded');
-        // close all others first
         cards.forEach(function (c) {
           c.classList.remove('is-expanded');
           var w = c.querySelector('.project-slider-wrap');
@@ -1132,8 +1131,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
 
-      cover.addEventListener('click', toggle);
-      info.addEventListener('click', toggle);
+      if (cover) cover.addEventListener('click', toggle);
+      if (info) info.addEventListener('click', toggle);
 
       if (prevBtn && slider) {
         prevBtn.addEventListener('click', function (e) {
