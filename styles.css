@@ -9798,117 +9798,109 @@ h3 {
     color: #2b6b76;
 }
 
-/* --- Slider overlay --- */
-.project-slider-wrap {
+/* --- Project Lightbox Overlay --- */
+.project-lightbox {
     display: none;
-    margin-top: 12px;
-    position: relative;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
 }
 
-.project-slider-wrap.is-open {
-    display: block;
-}
-
-.project-slider {
+.project-lightbox.is-active {
     display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 4px 0 12px;
-    scrollbar-width: thin;
-    scrollbar-color: #2b6b76 transparent;
 }
 
-.project-slider::-webkit-scrollbar {
-    height: 6px;
-}
-
-.project-slider::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.project-slider::-webkit-scrollbar-thumb {
-    background: #2b6b76;
-    border-radius: 3px;
-}
-
-.project-slider img {
-    flex-shrink: 0;
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+.project-lightbox__img {
+    max-width: 85vw;
+    max-height: 80vh;
+    object-fit: contain;
     border-radius: 8px;
-    scroll-snap-align: start;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: opacity 0.25s ease;
 }
 
-.project-slider-nav {
+.project-lightbox__close {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
+    top: 24px;
+    right: 28px;
+    width: 44px;
+    height: 44px;
     border: none;
-    background: rgba(255,255,255,0.92);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 22px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
     transition: background 0.2s;
+}
+
+.project-lightbox__close:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.project-lightbox__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.project-lightbox__nav:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.project-lightbox__nav--prev {
+    left: 20px;
+}
+
+.project-lightbox__nav--next {
+    right: 20px;
+}
+
+.project-lightbox__counter {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
-    color: #153a3d;
-}
-
-.project-slider-nav:hover {
-    background: #fff;
-}
-
-.project-slider-nav--prev {
-    left: 6px;
-}
-
-.project-slider-nav--next {
-    right: 6px;
-}
-
-/* Expanded card spans full row */
-.project-card.is-expanded,
-.blog-card.is-expanded {
-    grid-column: 1 / -1;
-}
-
-.project-card.is-expanded .project-slider img,
-.blog-card.is-expanded .project-slider img {
-    width: 360px;
-    height: 260px;
-}
-
-@media (max-width: 1024px) {
-    .past-projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .project-card.is-expanded .project-slider img,
-    .blog-card.is-expanded .project-slider img {
-        width: 300px;
-        height: 220px;
-    }
+    letter-spacing: 2px;
 }
 
 @media (max-width: 600px) {
-    .past-projects-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
+    .project-lightbox__img {
+        max-width: 94vw;
+        max-height: 70vh;
     }
-    .past-projects {
-        padding: 50px 0 40px;
+    .project-lightbox__nav {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
     }
-    .project-card.is-expanded .project-slider img,
-    .blog-card.is-expanded .project-slider img {
-        width: 260px;
-        height: 190px;
-    }
+    .project-lightbox__nav--prev { left: 8px; }
+    .project-lightbox__nav--next { right: 8px; }
+    .project-lightbox__close { top: 12px; right: 12px; }
 }
+
+/* Hide old inline slider elements */
+.project-slider-wrap { display: none !important; }
 
