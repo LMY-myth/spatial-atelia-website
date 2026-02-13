@@ -1101,4 +1101,52 @@ document.addEventListener('DOMContentLoaded', function () {
         '&body='    + encodeURIComponent(mailBody);
     });
   })();
+
+  /* ---------- Past Projects Slider ---------- */
+  (function initProjectSlider() {
+    var cards = document.querySelectorAll('.project-card[data-project]');
+    if (!cards.length) return;
+
+    cards.forEach(function (card) {
+      var cover = card.querySelector('.project-card-cover');
+      var info = card.querySelector('.project-card-info');
+      var wrap = card.querySelector('.project-slider-wrap');
+      var slider = card.querySelector('.project-slider');
+      var prevBtn = card.querySelector('.project-slider-nav--prev');
+      var nextBtn = card.querySelector('.project-slider-nav--next');
+
+      function toggle() {
+        var wasOpen = card.classList.contains('is-expanded');
+        // close all others first
+        cards.forEach(function (c) {
+          c.classList.remove('is-expanded');
+          var w = c.querySelector('.project-slider-wrap');
+          if (w) w.classList.remove('is-open');
+        });
+        if (!wasOpen) {
+          card.classList.add('is-expanded');
+          wrap.classList.add('is-open');
+          setTimeout(function () {
+            card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }, 50);
+        }
+      }
+
+      cover.addEventListener('click', toggle);
+      info.addEventListener('click', toggle);
+
+      if (prevBtn && slider) {
+        prevBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          slider.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+      }
+      if (nextBtn && slider) {
+        nextBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          slider.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+      }
+    });
+  })();
 });
